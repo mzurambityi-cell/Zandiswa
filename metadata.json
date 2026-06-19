@@ -1,0 +1,6 @@
+{
+  "name": "Zandiswa Properties",
+  "description": "Exquisite properties across the Western Cape by Zandiswa Properties. Rent, buy, or list properties with our premier agents and our Gemini-powered property assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

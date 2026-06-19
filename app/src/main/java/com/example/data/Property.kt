@@ -1,0 +1,241 @@
+package com.example.data
+
+data class Property(
+    val id: Int,
+    val title: String,
+    val price: Double,
+    val type: PropertyType,
+    val listingType: ListingType,
+    val suburb: String,
+    val city: String = "Western Cape",
+    val bedrooms: Int,
+    val bathrooms: Int,
+    val sizeSqm: Int,
+    val description: String,
+    val agentName: String,
+    val agentPhone: String,
+    val agentEmail: String,
+    val imageUrl: String
+)
+
+enum class PropertyType(val displayName: String) {
+    HOUSE("House"),
+    APARTMENT("Apartment"),
+    VILLA("Villa"),
+    COTTAGE("Cottage"),
+    PENTHOUSE("Penthouse")
+}
+
+enum class ListingType(val displayName: String) {
+    BUY("Buy"),
+    RENT("Rent")
+}
+
+object WesternCapePropertyData {
+    val suburbs = listOf(
+        "Khayelitsha",
+        "Camps Bay",
+        "Stellenbosch",
+        "Sea Point",
+        "Hermanus",
+        "Knysna",
+        "Franschhoek",
+        "Muizenberg",
+        "Constantia"
+    )
+
+    val properties = listOf(
+        Property(
+            id = 1,
+            title = "Modern Khulani Park Architectural Classic",
+            price = 1450000.0,
+            type = PropertyType.HOUSE,
+            listingType = ListingType.BUY,
+            suburb = "Khayelitsha",
+            bedrooms = 3,
+            bathrooms = 2,
+            sizeSqm = 160,
+            description = "Stunning, newly renovated family home in the heart of Khulani Park. Features elegant modern bathrooms, tiled open-plan lounge and dining room, fully-fitted luxury kitchen, active solar backup power systems, secure high-boundary walling with an automated gate, and single-bay garage.",
+            agentName = "Nolulufefe Beja",
+            agentPhone = "+27 (0)73 627 4193",
+            agentEmail = "patrickbeja1966@gmail.com",
+            imageUrl = "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 11,
+            title = "Zodiac Street Premium Townhouse",
+            price = 9500.0,
+            type = PropertyType.HOUSE,
+            listingType = ListingType.RENT,
+            suburb = "Khayelitsha",
+            bedrooms = 2,
+            bathrooms = 2,
+            sizeSqm = 120,
+            description = "A neat and highly secure double-story townhouse located on Zodiac Street. Features open wood-accent kitchen, built-in wardrobes, electric fencing, and highly accessible location near local transit and shopping complexes. Maintained to the highest standards by Zandiswa Properties.",
+            agentName = "Patrick Beja",
+            agentPhone = "+27 (0)76 786 0422",
+            agentEmail = "patrickbeja1966@gmail.com",
+            imageUrl = "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 2,
+            title = "The Twelve Apostles Luxury Ocean Villa",
+            price = 24500000.0,
+            type = PropertyType.VILLA,
+            listingType = ListingType.BUY,
+            suburb = "Camps Bay",
+            bedrooms = 5,
+            bathrooms = 5,
+            sizeSqm = 650,
+            description = "Sleek, modern architectural masterpiece boasting expansive double-volume glass facades overlooking the Atlantic Ocean. Features dynamic glass infinity pool, massive outdoor entertaining deck, state-of-the-art chef's kitchen, and a private cinema. Nestled under the Twelve Apostles mountains with 24-hour guarded security.",
+            agentName = "Nolulufefe Beja",
+            agentPhone = "+27 (0)73 627 4193",
+            agentEmail = "patrickbeja1966@gmail.com",
+            imageUrl = "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 2,
+            title = "Simonsberg Vineyards Estate Cottage",
+            price = 6800000.0,
+            type = PropertyType.COTTAGE,
+            listingType = ListingType.BUY,
+            suburb = "Stellenbosch",
+            bedrooms = 3,
+            bathrooms = 3,
+            sizeSqm = 280,
+            description = "Charming Cape Dutch inspired contemporary cottage nestled in a highly secure winelands estate. Oak-lined entrance, cozy open wood-burning fireplace, large open country kitchen, and a gorgeous wrapping verandah overlooking active vineyards and the epic Simonsberg mountains.",
+            agentName = "Stefan van der Merwe",
+            agentPhone = "+27 (83) 555-2345",
+            agentEmail = "stefan@westerncapehomes.co.za",
+            imageUrl = "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 3,
+            title = "Ocean Front Promenade Penthouse",
+            price = 45000.0,
+            type = PropertyType.PENTHOUSE,
+            listingType = ListingType.RENT,
+            suburb = "Sea Point",
+            bedrooms = 2,
+            bathrooms = 2,
+            sizeSqm = 130,
+            description = "Highly sought-after, fully furnished luxury oceanfront penthouse along the bustling Sea Point promenade. Features private wrap-around rooftop terrace with panoramic sunset ocean views, solar-powered inverter for seamless backup during load-shedding, 24-hour concierge, and high-speed fiber internet.",
+            agentName = "Sarah Jenkins",
+            agentPhone = "+27 (71) 555-9876",
+            agentEmail = "sarah@westerncapehomes.co.za",
+            imageUrl = "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 4,
+            title = "Walker Bay Fynbos Seaside Cottage",
+            price = 3950000.0,
+            type = PropertyType.COTTAGE,
+            listingType = ListingType.BUY,
+            suburb = "Hermanus",
+            bedrooms = 3,
+            bathrooms = 2,
+            sizeSqm = 180,
+            description = "Delightful coastal stone cottage situated just steps away from the famous Hermanus cliff paths. Expansive open-plan living with exposed wooden trusses, indoor Cape braai (built-in BBQ), beautifully maintained local fynbos garden, and gorgeous views of Walker Bay, ideal for whale watching.",
+            agentName = "Pieter Botha",
+            agentPhone = "+27 (82) 555-6677",
+            agentEmail = "pieter@westerncapehomes.co.za",
+            imageUrl = "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 5,
+            title = "Perched Heights Knysna Heads Mansion",
+            price = 18900000.0,
+            type = PropertyType.HOUSE,
+            listingType = ListingType.BUY,
+            suburb = "Knysna",
+            bedrooms = 4,
+            bathrooms = 4,
+            sizeSqm = 520,
+            description = "Spectacular luxury residence perched high on the majestic Knysna Heads. Breathtaking views of the Knysna Lagoon and the Indian Ocean through expansive floor-to-ceiling glass walls. Features cantilevered ocean-view deck, private heated lap pool, home automation, and a fully solar-powered backup grid.",
+            agentName = "Devon Hughes",
+            agentPhone = "+27 (76) 555-4321",
+            agentEmail = "devon@westerncapehomes.co.za",
+            imageUrl = "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 6,
+            title = "Scenic Franschhoek Wine Valley Apartment",
+            price = 22000.0,
+            type = PropertyType.APARTMENT,
+            listingType = ListingType.RENT,
+            suburb = "Franschhoek",
+            bedrooms = 2,
+            bathrooms = 2,
+            sizeSqm = 95,
+            description = "Elegant modern apartment located in the heart of historic Franschhoek village. Walk to world-class gourmet restaurants, art galleries, and the famous wine tram. Offers a private loft, high-end Siemens appliances, and a beautiful central courtyard with towering mountain vistas.",
+            agentName = "Stefan van der Merwe",
+            agentPhone = "+27 (83) 555-2345",
+            agentEmail = "stefan@westerncapehomes.co.za",
+            imageUrl = "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 7,
+            title = "Surfers Corner Beachfront Loft",
+            price = 18500.0,
+            type = PropertyType.APARTMENT,
+            listingType = ListingType.RENT,
+            suburb = "Muizenberg",
+            bedrooms = 2,
+            bathrooms = 2,
+            sizeSqm = 110,
+            description = "Vibrant, high-ceiling loft overlooking the famous Muizenberg beach and surfer's corner. Features double-volume ceilings, large bay windows showcasing the colorful beach huts and surfing waves, private indoor surfboard storage rack, and security controlled access.",
+            agentName = "Sarah Jenkins",
+            agentPhone = "+27 (71) 555-9876",
+            agentEmail = "sarah@westerncapehomes.co.za",
+            imageUrl = "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 8,
+            title = "Whispering Pines Sprawling Constantia Manor",
+            price = 14000000.0,
+            type = PropertyType.HOUSE,
+            listingType = ListingType.BUY,
+            suburb = "Constantia",
+            bedrooms = 4,
+            bathrooms = 4,
+            sizeSqm = 480,
+            description = "Gracious, sprawling family estate situated in the leafy prestige of Constantia's historic greenbelts. Complete with private borehole water recycling system, 12kW solar build, private tennis court, sparkling swimming pool, separate self-contained guest cottage, and state-of-the-art multi-layer security.",
+            agentName = "Zanele Nkosi",
+            agentPhone = "+27 (82) 555-0192",
+            agentEmail = "zanele@westerncapehomes.co.za",
+            imageUrl = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 9,
+            title = "Stellenbosch Campus Edge Studio Loft",
+            price = 12500.0,
+            type = PropertyType.APARTMENT,
+            listingType = ListingType.RENT,
+            suburb = "Stellenbosch",
+            bedrooms = 1,
+            bathrooms = 1,
+            sizeSqm = 45,
+            description = "Ultra-trendy industrial-chic loft apartment located in a highly secure building just minutes from Stellenbosch University. Exposed raw brick accent walls, private balcony with views of Coetzenburg, secure underground parking slot, and high-speed Wi-Fi.",
+            agentName = "Stefan van der Merwe",
+            agentPhone = "+27 (83) 555-2345",
+            agentEmail = "stefan@westerncapehomes.co.za",
+            imageUrl = "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?auto=format&fit=crop&w=800&q=80"
+        ),
+        Property(
+            id = 10,
+            title = "Camps Bay Sunset Ridge Studio",
+            price = 16000.0,
+            type = PropertyType.APARTMENT,
+            listingType = ListingType.RENT,
+            suburb = "Camps Bay",
+            bedrooms = 1,
+            bathrooms = 1,
+            sizeSqm = 50,
+            description = "Stylish, fully equipped ocean-view studio apartment. Located a brief 5-minute walk from Camps Bay beach strip and restaurant boulevard. Safe and quiet neighborhood with private patio and pool access.",
+            agentName = "Zanele Nkosi",
+            agentPhone = "+27 (82) 555-0192",
+            agentEmail = "zanele@westerncapehomes.co.za",
+            imageUrl = "https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&fit=crop&w=800&q=80"
+        )
+    )
+}
